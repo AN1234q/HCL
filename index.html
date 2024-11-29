@@ -8,16 +8,13 @@
         body {
             font-family: Tahoma, Arial, Helvetica, sans-serif;
             margin: 20px;
-            background-color: #f4f4f4;
+            background-color: white;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: white;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
@@ -27,27 +24,35 @@
         }
 
         p {
+            font-size: 14px; /* Reduced font size */
             margin-bottom: 20px;
         }
 
         .buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
             justify-content: center;
         }
 
-        button {
+        .button {
+            flex: 1 1 33%; /* Each button takes up one third of the row */
+            max-width: 33%; /* Ensure three buttons per row */
             padding: 10px;
+            box-sizing: border-box; /* Include padding in the element's total width and height */
+        }
+
+        button {
+            width: 100%;
+            padding: 0;
             background-color: transparent;
             border: none;
             cursor: pointer;
         }
 
         button img {
-            width: 200px; /* Increase the width of the images */
-            height: auto;
+            width: 100%;
+            height: auto; /* Ensure images maintain their aspect ratio */
+            object-fit: contain; /* Ensure images look proper */
         }
 
         .popup {
@@ -86,21 +91,31 @@
         <p>A new employee in the first initial days of joining tends to be hesitant and at times confused as he/she may not know what is the accepted norm, job role, processes, or culture.</p>
         <p>This buddy program will accelerate the new employee's ability to deal with these early disconcerting issues by attaching new employees with employees who have been with the company for some time and who not only understand but also can explain the process, system, job role, interpersonal connect within the team, as well as introduce the new employee to the key people in the function.</p>
         <div class="buttons">
-            <button class="open-popup" data-popup="popup1">
-                <img src="https://i.ibb.co/17PG2Tg/Group-1.png" alt="Support for New Hires" />
-            </button>
-            <button class="open-popup" data-popup="popup2">
-                <img src="https://i.ibb.co/6wKhFC4/Group-1-1.png" alt="Task Management" />
-            </button>
-            <button class="open-popup" data-popup="popup3">
-                <img src="https://i.ibb.co/BrYS3sg/Group-1-2.png" alt="Rewards and Recognitions" />
-            </button>
-            <button class="open-popup" data-popup="popup4">
-                <img src="https://i.ibb.co/mBf913b/Group-1-3.png" alt="Best Practices" />
-            </button>
-            <button class="open-popup" data-popup="popup5">
-                <img src="https://i.ibb.co/z2NVJrt/Group-1-4.png" alt="Communication and Connection" />
-            </button>
+            <div class="button">
+                <button class="open-popup" data-popup="popup1">
+                    <img src="https://i.ibb.co/RB8cNm9/Group-5.png" alt="Support for New Hires" />
+                </button>
+            </div>
+            <div class="button">
+                <button class="open-popup" data-popup="popup2">
+                    <img src="https://i.ibb.co/Dg4VPcG/Group-4.png" alt="Task Management" />
+                </button>
+            </div>
+            <div class="button">
+                <button class="open-popup" data-popup="popup3">
+                    <img src="https://i.ibb.co/fdpM5Ht/Group-3.png" alt="Rewards and Recognitions" />
+                </button>
+            </div>
+            <div class="button">
+                <button class="open-popup" data-popup="popup4">
+                    <img src="https://i.ibb.co/6yxc7r6/Group-2.png" alt="Best Practices" />
+                </button>
+            </div>
+            <div class="button">
+                <button class="open-popup" data-popup="popup5">
+                    <img src="https://i.ibb.co/RvRPCYn/Group-1.png" alt="Communication and Connection" />
+                </button>
+            </div>
         </div>
     </div>
 
